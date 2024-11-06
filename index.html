@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pemilihan Presiden Indonesia 2019</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .chart-container {
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hasil Pemilihan Presiden Indonesia 2019</h1>
+    <img src="ind.png" width="600px">
+    <div class="chart-container">
+        <canvas id="presidentChart"></canvas>
+    </div>
+
+    <script>
+        var ctx = document.getElementById('presidentChart').getContext('2d');
+        var presidentChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Jokowi-Ma\'ruf', 'Prabowo-Sandi'],  // Nama pasangan calon
+                datasets: [{
+                    label: 'Jumlah Suara (Juta)',
+                    data: [85, 68],  // Jumlah suara dalam juta
+                    backgroundColor: ['#329fd0', '#4e992d'],  // Warna batang
+                    borderColor: ['#0056b3', '#c82333'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Jumlah Suara (Juta)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Hasil Pemilihan Presiden Indonesia 2019'
+                    }
+                }
+            }
+        });
+    </script>
+    <style>
+        /* Centering the table */
+        .table-container {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+            height: 100vh;           /* Full viewport height */
+        }
+    </style>
+    <img src="chart.png" width="600px">
+    <hr>
+    <table border="1" style="background-color:rgb(101, 189, 101); margin: 20px;"  >
+        <thead>
+                <th>NO</th>
+                <th>KOTA</th>
+                <th>Jokowi - Ma'ruf</th>
+                <th>Prabowo - Sandi</th>
+                <th>Total Suara</th>
+        </thead>
+        <tbody style="font-size: 19px;">
+            <tr>
+                <td style="text-align: center;">1</td>
+                <td>Aceh</td>
+                <td>404,188</td>
+                <td>2,400,746</td>
+                <td>2,804,934</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">2</td>
+                <td>Sumatera Utara</td>
+                <td>3,936,515</td>
+                <td>3,587,786</td>
+                <td>7,524,301</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">3</td>
+                <td>Sumatera Barat</td>
+                <td>407,761</td>
+                <td>2,488,733</td>
+                <td>2,896,494</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">4</td>
+                <td>Riau</td>
+                <td>1,248,713</td>
+                <td>1,975,287</td>
+                <td>3,224,000</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">5</td>
+                <td>Kepulauan Riau</td>
+                <td>550,692</td>
+                <td>465,511</td>
+                <td>1,016,203</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">6</td>
+                <td>Jambi</td>
+                <td>859,833</td>
+                <td>1,203,025</td>
+                <td>2,062,858</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">7</td>
+                <td>Bengkulu</td>
+                <td>583,388</td>
+                <td>558,999</td>
+                <td>1,142,387</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">8</td>
+                <td>Sumatera Selatan</td>
+                <td>1,942,987</td>
+                <td>2,877,781</td>
+                <td>4,820,768</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">9</td>
+                <td>Bangka Belitung</td>
+                <td>495,729</td>
+                <td>288,235</td>
+                <td>783,964</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">10</td>
+                <td>Lampung</td>
+                <td>2,853,585</td>
+                <td>1,955,689</td>
+                <td>4,809,274</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">11</td>
+                <td>Banten</td>
+                <td>2,537,524</td>
+                <td>4,059,514</td>
+                <td>6,597,038</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">12</td>
+                <td>Jawa Barat</td>
+                <td>10,750,568</td>
+                <td>16,077,446</td>
+                <td>26,828,014</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">13</td>
+                <td>Jawa Tengah</td>
+                <td>16,825,511</td>
+                <td>4,944,447</td>
+                <td>21,769,958</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">14</td>
+                <td>Yogyakarta</td>
+                <td>1,655,174</td>
+                <td>742,481</td>
+                <td>2,397,655</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">15</td>
+                <td>Jawa Timur</td>
+                <td>16,231,668</td>
+                <td>8,441,247</td>
+                <td>24,672,915</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">16</td>
+                <td>Bali</td>
+                <td>2,351,057</td>
+                <td>213,415</td>
+                <td>2,564,472</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">17</td>
+                <td>Nusa Tenggara Barat</td>
+                <td>951,242</td>
+                <td>2,011,319</td>
+                <td>2,962,561</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">18</td>
+                <td>Nusa Tenggara Timur</td>
+                <td>2,368,982</td>
+                <td>305,587</td>
+                <td>2,674,569</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">19</td>
+                <td>Maluku</td>
+                <td>599,457</td>
+                <td>392,940</td>
+                <td>992,397</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">20</td>
+                <td>Maluku Utara</td>
+                <td>310,548</td>
+                <td>344,823</td>
+                <td>655,371</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">21</td>
+                <td>Kalimantan Barat</td>
+                <td>1,709,896</td>
+                <td>1,263,757</td>
+                <td>2,973,653</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">22</td>
+                <td>Kalimantan Tengah</td>
+                <td>830,948</td>
+                <td>537,138</td>
+                <td>1,368,086</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">23</td>
+                <td>Kalimntan Utara</td>
+                <td>248,239</td>
+                <td>106,162</td>
+                <td>354,401</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">24</td>
+                <td>Kalimantan TImur</td>
+                <td>1,094,845</td>
+                <td>870,443</td>
+                <td>1,965,288</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">25</td>
+                <td>Kalimantan Selatan</td>
+                <td>823,939</td>
+                <td>1,470,163</td>
+                <td>2,294,102</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">26</td>
+                <td>Sulawesi Selatan</td>
+                <td>2,117,591</td>
+                <td>2,809,393</td>
+                <td>4,926,984</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">27</td>
+                <td>Sulawesi Tenggara</td>
+                <td>555,664</td>
+                <td>842,117</td>
+                <td>1,397,781</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">28</td>
+                <td>Sulawesi Barat</td>
+                <td>475,312</td>
+                <td>263,620</td>
+                <td>738,932</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">29</td>
+                <td>Sulawesi Tengah</td>
+                <td>914,588</td>
+                <td>706,654</td>
+                <td>1,621,242</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">30</td>
+                <td>Gorontalo</td>
+                <td>369,803</td>
+                <td>345,129</td>
+                <td>714,932</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">31</td>
+                <td>Sulawesi utara</td>
+                <td>1,220,524</td>
+                <td>359,685</td>
+                <td>1,580,209</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">32</td>
+                <td>Papua Barat</td>
+                <td>508,997</td>
+                <td>128,732</td>
+                <td>637,729</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">33</td>
+                <td>Papua</td>
+                <td>3,021,713</td>
+                <td>311,352</td>
+                <td>3,333,065</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
